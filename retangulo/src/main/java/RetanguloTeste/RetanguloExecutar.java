@@ -1,8 +1,8 @@
-package RetanguloTeste;
+package main.java.RetanguloTeste;
 
 import Retangulo.Retangulo;
 
-public class RetanguloTeste {
+public class RetanguloExecutar {
 
     public static void main(String[] args) {
 
