@@ -1,15 +1,23 @@
 package model;
 
+import model.Dependente;
+
 public class Cliente {
 
     private String nome;
-
     private String endereco;
-
-    public Dependente[] dependente = new Dependente[10];
+    private Dependente[] dependente = new Dependente[5];
 
     public Dependente[] getDependente() {
         return dependente;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     public String getNome() {
@@ -20,11 +28,7 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public String getEndereco() {
-        return endereco;
-    }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
+
+
 }

@@ -1,6 +1,7 @@
 package model;
 
 public class Dependente {
+
     private String nome;
 
     public String getNome() {
