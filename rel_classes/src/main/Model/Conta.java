@@ -1,12 +1,12 @@
-package model;
-
-import model.Cliente;
+package Model;
 
 public class Conta {
 
     private int numero;
     private double saldo;
     private Cliente cliente;
+
+    public Conta(int numero, double saldo, Cliente cliente) {}
 
     public int getNumero() {
         return numero;

@@ -1,12 +1,12 @@
-package model;
-
-import model.Dependente;
+package Model;
 
 public class Cliente {
 
     private String nome;
     private String endereco;
-    private Dependente[] dependente = new Dependente[5];
+    private final Dependente[] dependente = new Dependente[5];
+
+    public  Cliente(String nome, String endereco) {}
 
     public Dependente[] getDependente() {
         return dependente;

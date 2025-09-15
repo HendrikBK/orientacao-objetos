@@ -1,44 +1,33 @@
-package view;
+package View;
 
-import model.Banco;
-import model.Cliente;
-import model.Conta;
-import model.Dependente;
+import Model.Cliente;
+import Model.Conta;
+import Model.Dependente;
 
 
 
 public class TestarRelacionamentos {
 
     public static void main(String[] args) {
-        model.Cliente cliente = new Cliente();
-        cliente.setNome("Alencar");
-        cliente.setEndereco("Rua ZYZ");
+        Cliente cliente = new Cliente("Alencar", "Rua ZYZ");
 
-        Cliente cliente1 = new Cliente();
-        cliente1.setNome("Paula");
-        cliente1.setEndereco("Rua N");
+        Conta cc = new Conta(200, 598000, cliente);
 
-        Conta cc = new Conta();
-        cc.setNumero(200);
-        cc.setSaldo(598000);
-        cc.setCliente(cliente1);
+        Dependente pietra = new Dependente("Pietra");
+        Dependente pierre = new Dependente("Pierre");
+        Dependente giovana = new Dependente("Giovana");
+        Dependente silvia = new Dependente("Silvia");
 
-        Dependente pietra = new Dependente();
-        pietra.setNome("Pietra");
-        Dependente pierre = new Dependente();
-        pierre.setNome("Pierre");
-        Dependente giovana = new Dependente();
-        giovana.setNome("giovana");
+        cliente.getDependente()[0] =  pietra;
+        cliente.getDependente()[1] =  pierre;
+        cliente.getDependente()[2] =  giovana;
+        cliente.getDependente()[3] =  silvia;
 
-        cliente1.getDependente()[0] =  pietra;
-        cliente1.getDependente()[1] =  pierre;
-        cliente1.getDependente()[2] =  giovana;
-
-        imprirConta(cc);
+        imprimirConta(cc);
 
     }
 
-    private static void imprirConta(Conta c){
+    private static void imprimirConta(Conta c){
         System.out.println("Número: "+c.getNumero());
         System.out.println("Saldo: "+c.getSaldo());
         System.out.println("Cliente: "+c.getCliente().getNome());
@@ -53,13 +42,6 @@ public class TestarRelacionamentos {
 
         }
     }
-
-       /* System.out.println("Depente: "
-                +c.getCliente().getDependente()[0].getNome());
-        System.out.println("Depente: "
-                +c.getCliente().getDependente()[1].getNome());
-        System.out.println("Depente: "
-                +c.getCliente().getDependente()[2].getNome());*/
     }
 
 }
