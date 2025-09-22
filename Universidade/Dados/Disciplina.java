@@ -15,4 +15,16 @@ public class Disciplina {
     public Turma[] getTurmas() {
         return turmas;
     }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public Curso getCurso() {
+        return curso;
+    }
 }

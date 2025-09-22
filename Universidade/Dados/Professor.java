@@ -12,6 +12,14 @@ public class Professor {
         this.nome = nome;
     }
 
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
     public Curso[] getCursos() {
         return cursos;
     }

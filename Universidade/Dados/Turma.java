@@ -18,4 +18,16 @@ public class Turma {
         return aluno;
     }
 
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public String getDisciplina() {
+        return disciplina;
+    }
+
+    public String getProfessor() {
+        return professor;
+    }
+
 }
